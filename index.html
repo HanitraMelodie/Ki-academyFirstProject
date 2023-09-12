@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager Interface</title>
+    <style>
+        /* Add your styles here */
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .task {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Task Manager</h1>
+
+    <!-- Form for adding a task -->
+    <form id="addTaskForm">
+        <input type="text" id="taskInput" placeholder="Enter a new task" required>
+        <button type="submit" id="addButton">Add Task</button>
+    </form>
+
+    <!-- Task List -->
+    <ul id="taskList">
+        <!-- Tasks will be appended here -->
+    </ul>
+
+    <!-- Template for individual tasks -->
+    <template id="taskTemplate">
+        <li class="task">
+            <span class="taskTitle"></span>
+            <div>
+                <button id="updateButton" class="updateBtn">Update</button>
+                <button id="completeButton"class="completeBtn">Complete</button>
+                <button id="deleteButton"class="deleteBtn">Delete</button>
+            </div>
+        </li>
+    </template>
+    <script src="index.js"></script>
+</body>
+</html>
